@@ -1,13 +1,12 @@
-<!-- <mat-toolbar>
+<mat-toolbar>
     <button
       mat-icon-button
       class="example-icon"
       aria-label="Example icon-button with menu icon"
-      *ngIf="sidenav.mode === 'over'"
-      (click)="sidenav.toggle()"
+      (click)="toggleSidebar()"
     >
-      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+      <mat-icon *ngIf="sidenav && !sidenav.opened"> menu </mat-icon>
+      <mat-icon *ngIf="sidenav && sidenav.opened"> close </mat-icon>
     </button>
     <span>HCL Software</span>
     <span class="example-spacer"></span>
@@ -25,4 +24,5 @@
     >
       <mat-icon>share</mat-icon>
     </button>
-  </mat-toolbar> -->
+  </mat-toolbar>
+  

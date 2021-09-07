@@ -14,6 +14,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { LayoutModule } from 'src/app/shared/container/layout/layout.module';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [
     CommonModule,
     MainRoutingModule,
-
+    LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
@@ -36,6 +37,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ReactiveFormsModule,
 
     MatGridListModule
+
   ]
 })
 export class MainModule { }
