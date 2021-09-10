@@ -1,25 +1,30 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
-import { SidebarComponent } from 'src/app/shared/container/layout/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit {
-  constructor() {}
+export class MainComponent{
 
-  //   @ViewChild('sidebar')
-  //     sidebar!: SidebarComponent;
-  @ViewChild('sidenav') sidenav: MatSidenav | undefined;
-  sidebarStatus: boolean = false;
-  ngOnInit(): void {}
+  
+    sidebarActive : boolean = false;
+  title = 'angular-pro-sidebar';
+  constructor() { }
+  toggleSidebar() {
+    this.sidebarActive = !this.sidebarActive;
+    // this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());
+  }
+  toggleBackgroundImage() {
+    // this.sidebarservice.hasBackgroundImage = !this.sidebarservice.hasBackgroundImage;
+  }
+  getSideBarState() {
+      return false;
+    // return this.sidebarservice.getSidebarState();
+  }
 
-  sidebarToggle(event: boolean) {
-    if (this.sidenav) {
-      this.sidenav.toggle();
-    }
+  hideSidebar() {
+    // this.sidebarservice.setSidebarState(true);
   }
 
   //   ngAfterViewInit() {

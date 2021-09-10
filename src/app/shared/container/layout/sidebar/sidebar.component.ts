@@ -9,7 +9,6 @@ export class SidebarComponent implements OnInit {
 
   constructor() { }
 
-  @ViewChild('sidenav') sidenav: ElementRef | undefined;
 
   ngOnInit(): void {
   }
